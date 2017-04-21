@@ -1,0 +1,2 @@
+`grep -rni "string" *`
+http://stackoverflow.com/questions/15286947/how-perform-grep-operation-on-all-files-in-a-directory
