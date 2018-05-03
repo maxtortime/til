@@ -1,0 +1,2 @@
+- [vuejs랑 DRF 연동해서 JWT 인증하기 1](https://hackernoon.com/jwt-authentication-in-vue-js-and-django-rest-framework-part-1-c40c5c0d4f6e) 
+- [vue-auth](https://github.com/websanova/vue-auth)
