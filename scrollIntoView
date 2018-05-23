@@ -1,0 +1,4 @@
+스크롤을 조정할 수 있는 함수가 있어서 바로 적용해보았다.
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_scrollintoview
