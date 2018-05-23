@@ -1,0 +1,10 @@
+요즘 조건 설정 시마다 JSON을 SQL로 변환하고 그 SQL을 실행하는 프로그램을 만들고 있다.
+SQL은 임시테이블에 값을 넣어놓았다가 맨 마지막에는 테이블 내용을 출력하게 된다.
+그런데 해당 쿼리를 장고에서 실행시키니 아래 에러가 발생했다.
+`django.db.utils.ProgrammingError: No results.  Previous SQL was not a query.` 
+
+이 에러의 이유는 알아보니 임시테이블에 행들을 넣을 때 SSMS 같은 프로그램에서는 `* 행이 반영됨` 같은 메시지를 반환하게 되는데 pyodbc 에서는
+이 메시지도 SQL이라고 생각하고 위와 같은 에러를 내는 것 같다.
+위 에러를 방지하기 위해서는 SQL 맨 위에 `SET NOCOUNT ON`을 넣어서 저런 메시지를 나오지 않게 하면 된다.
+
+https://docs.microsoft.com/ko-kr/sql/t-sql/statements/set-nocount-transact-sql?view=sql-server-2017
